@@ -5,9 +5,8 @@
 //************ VARIABLES *************
 
 //********** CONSTRUCTORES ***********
-Opcion::Opcion(std::string p_descripcion, std::vector<std::string> p_accionesCompatibles) {
+Opcion::Opcion(std::string p_descripcion) {
 	descripcion = p_descripcion;
-	accionesCompatibles = p_accionesCompatibles;
 }
 
 Opcion::~Opcion() {

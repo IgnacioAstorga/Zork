@@ -7,16 +7,18 @@
 //************ VARIABLES *************
 Mundo* Mundo::instancia = NULL;
 
-std::unordered_map<std::string, Situacion> mapaSituaciones;
+std::unordered_map<std::string, Situacion*> mapaSituaciones;
 
 //********** CONSTRUCTORES ***********
 
 Mundo::Mundo() {
 	// Carga la situación inicial
-	SituacionInicial::cargar();
+	Situacion* situacion = new SituacionInicial();
+	situacion->cargarSituacion();
+	addSituacion(*situacion);
 
 	// Establece la situación inicial
-	setSituacionActual(getSituacion("situacion_inicial"));
+	setSituacionActual(*situacion);
 }
 
 //************** MÉTODOS *************
@@ -34,21 +36,21 @@ Mundo& Mundo::obtenerInstancia()
 }
 
 // Propios
-void Mundo::addSituacion(std::string clave, Situacion situacion) {
-	mapaSituaciones[clave] = situacion;
+void Mundo::addSituacion(Situacion& situacion) {
+	mapaSituaciones[situacion.getCodigoSituacion()] = &situacion;
 }
 
-Situacion Mundo::getSituacion(std::string identificadorSituacion)
+Situacion& Mundo::getSituacion(std::string identificadorSituacion)
 {
-	return mapaSituaciones[identificadorSituacion];
+	return *mapaSituaciones[identificadorSituacion];
 }
 
-Situacion Mundo::getSituacionActual()
+Situacion& Mundo::getSituacionActual()
 {
-	return situacionActual;
+	return *situacionActual;
 }
 
-void Mundo::setSituacionActual(Situacion situacion)
+void Mundo::setSituacionActual(Situacion& situacion)
 {
-	situacionActual = situacion;
+	situacionActual = &situacion;
 }

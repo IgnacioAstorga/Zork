@@ -6,7 +6,7 @@
 class Opcion {
 
 public:
-	Opcion(std::string descripcion, std::vector<std::string> accionesCompatibles);
+	Opcion(std::string descripcion);
 	virtual ~Opcion();
 	std::string getDescripcion();
 	bool accionCompatible(std::string accion);

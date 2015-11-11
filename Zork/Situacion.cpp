@@ -3,23 +3,15 @@
 //************ VARIABLES *************
 
 //********** CONSTRUCTORES ***********
-Situacion::Situacion() {
-	// Este constructor no debería utilizarse
-}
-
-Situacion::Situacion(std::string p_nombre, std::string p_descripcion, std::vector<Opcion*> p_opciones) {
-	nombre = p_nombre;
-	descripcion = p_descripcion;
-	opciones = p_opciones;
-}
-
-Situacion::~Situacion() {
-	// No necesita hacer nada
-}
 
 //************** MÉTODOS *************
 
 // Propios
+std::string Situacion::getCodigoSituacion()
+{
+	return codigoSituacion;
+}
+
 std::string Situacion::getNombre()
 {
 	return nombre;
@@ -58,4 +50,25 @@ void Situacion::elegirOpcion(std::string accion, std::string objetivo)
 			break;
 		}
 	}
+}
+
+// Protegidos
+void Situacion::setCodigoSituacion(std::string p_codigoSituacion)
+{
+	codigoSituacion = p_codigoSituacion;
+}
+
+void Situacion::setNombre(std::string p_nombre)
+{
+	nombre = p_nombre;
+}
+
+void Situacion::setDescripcion(std::string P_descripcion)
+{
+	descripcion = P_descripcion;
+}
+
+std::vector<Opcion*>* Situacion::getOpciones()
+{
+	return &opciones;
 }

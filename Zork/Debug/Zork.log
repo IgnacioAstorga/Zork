@@ -1,19 +1,17 @@
-﻿Compilación iniciada a las 11/11/2015 3:04:44.
+﻿Compilación iniciada a las 11/11/2015 15:15:27.
      1>Proyecto "E:\Users\Nacho\Documents\GitHub\Zork\Zork\Zork.vcxproj" en el nodo 2 (Build destinos).
      1>ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Debug\Zork.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
-         stdafx.cpp
-         D:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\Zork.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Consola.cpp Juego.cpp Mundo.cpp Opcion.cpp OpcionMoverse.cpp Situacion.cpp SituacionInicial.cpp Util.cpp Zork.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\Zork.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Consola.cpp Juego.cpp Mundo.cpp OpcionMoverse.cpp Situacion.cpp SituacionInicial.cpp Util.cpp Zork.cpp
+         OpcionMoverse.cpp
+         Generando código...
+         Omitiendo... (no se detectaron cambios relevantes)
          Zork.cpp
          Util.cpp
          SituacionInicial.cpp
          Situacion.cpp
-         OpcionMoverse.cpp
-         Opcion.cpp
          Mundo.cpp
          Juego.cpp
          Consola.cpp
-         Generando código...
        Link:
          D:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Users\Nacho\Documents\GitHub\Zork\Debug\Zork.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"E:\Users\Nacho\Documents\GitHub\Zork\Debug\Zork.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Users\Nacho\Documents\GitHub\Zork\Debug\Zork.lib" /MACHINE:X86 Debug\Consola.obj
          Debug\Juego.obj
@@ -30,4 +28,4 @@
 
 Compilación correcta.
 
-Tiempo transcurrido 00:00:02.00
+Tiempo transcurrido 00:00:00.50

@@ -106,8 +106,8 @@ void Juego::cerrarJuego() {
 void Juego::jugar() {
 	while (!isJuegoAcabado()) {
 		// Muestra la información de la situación actual
-		Situacion situacionActual = Mundo::obtenerInstancia().getSituacionActual();
-		situacionActual.imprimirSituacion();
+		Situacion* situacionActual = &Mundo::obtenerInstancia().getSituacionActual();
+		situacionActual->imprimirSituacion();
 
 		// Solicita la orden del jugador y la procesa
 		std::string orden = Consola::obtenerInstancia().leerCadena();
@@ -116,6 +116,6 @@ void Juego::jugar() {
 		std::string objetivo = separado.size() > 1 ? separado[1] : "";
 
 		// Pasa la orden procesada a la situación
-		situacionActual.elegirOpcion(accion, objetivo);
+		situacionActual->elegirOpcion(accion, objetivo);
 	}
 }

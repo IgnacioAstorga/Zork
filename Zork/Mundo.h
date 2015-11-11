@@ -8,10 +8,10 @@ class Mundo {
 public:
 	static void inicializar();
 	static Mundo& obtenerInstancia();
-	void addSituacion(std::string clave, Situacion situacion);
-	Situacion getSituacion(std::string identificadorSituacion);
-	Situacion getSituacionActual();
-	void setSituacionActual(Situacion situacion);
+	void addSituacion(Situacion& situacion);
+	Situacion& getSituacion(std::string identificadorSituacion);
+	Situacion& getSituacionActual();
+	void setSituacionActual(Situacion& situacion);
 
 
 protected:
@@ -19,5 +19,5 @@ protected:
 
 private:
 	static Mundo* instancia;
-	Situacion situacionActual;
+	Situacion* situacionActual;
 };
