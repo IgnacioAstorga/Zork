@@ -10,8 +10,8 @@ int _tmain(int argc, _TCHAR* argv[]) {
 	Mundo::inicializar();
 
 	// Inicia el juego
-
-	//**** PRUEBAS ****
+	Juego::inicializar();
+	Juego::obtenerInstancia().iniciar();
 
 	return 0;
 };

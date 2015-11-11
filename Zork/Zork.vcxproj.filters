@@ -13,6 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Situaciones">
+      <UniqueIdentifier>{da1cd295-e1dc-4b0e-a2e6-6bc297aac0ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de código fuente\Opciones">
+      <UniqueIdentifier>{204c3705-2ed7-48bc-9212-d69788c3e3dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Opciones">
+      <UniqueIdentifier>{b9d1edc4-20ef-4101-a76b-0c5c36bd8921}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -39,6 +48,12 @@
     <ClInclude Include="Util.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="Juego.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="OpcionMoverse.h">
+      <Filter>Archivos de encabezado\Opciones</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -61,6 +76,15 @@
     </ClCompile>
     <ClCompile Include="Util.cpp">
       <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="Juego.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="SituacionInicial.cpp">
+      <Filter>Situaciones</Filter>
+    </ClCompile>
+    <ClCompile Include="OpcionMoverse.cpp">
+      <Filter>Archivos de código fuente\Opciones</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -11,6 +11,7 @@ public:
 	~Situacion();
 	std::string getNombre();
 	std::string getDescripcion();
+	void imprimirSituacion();
 	void elegirOpcion(std::string accion, std::string objetivo);
 
 private:

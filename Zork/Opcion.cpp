@@ -32,3 +32,9 @@ bool Opcion::accionCompatible(std::string accion)
 	}
 	return false;
 }
+
+void Opcion::imprimirOpcion() {
+	Consola consola = Consola::obtenerInstancia();
+
+	consola.imprimirCadena(getDescripcion());
+}

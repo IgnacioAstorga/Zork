@@ -12,6 +12,7 @@
 
 // CLASES
 #include <string>
+#include <sstream>
 #include <iostream>
 #include <vector>
 
@@ -19,3 +20,4 @@
 #include "Util.h"
 #include "Consola.h"
 #include "Mundo.h"
+#include "Juego.h"

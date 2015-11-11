@@ -1,5 +1,7 @@
 #include "stdafx.h"
 
+#include "SituacionInicial.cpp"
+
 #include <unordered_map>
 
 //************ VARIABLES *************
@@ -8,15 +10,13 @@ Mundo* Mundo::instancia = NULL;
 std::unordered_map<std::string, Situacion> mapaSituaciones;
 
 //********** CONSTRUCTORES ***********
-Mundo::Mundo() {
-	// Añadir todas las situaciones del juego al mapa de situaciones
-	// TODO	addSituacion("situacion_inicial", new SituacionInicial());
-	
-	setSituacionActual(getSituacion("situacion_inicial"));
-}
 
-void Mundo::addSituacion(std::string clave, Situacion situacion) {
-	mapaSituaciones[clave] = situacion;
+Mundo::Mundo() {
+	// Carga la situación inicial
+	SituacionInicial::cargar();
+
+	// Establece la situación inicial
+	setSituacionActual(getSituacion("situacion_inicial"));
 }
 
 //************** MÉTODOS *************
@@ -34,6 +34,10 @@ Mundo& Mundo::obtenerInstancia()
 }
 
 // Propios
+void Mundo::addSituacion(std::string clave, Situacion situacion) {
+	mapaSituaciones[clave] = situacion;
+}
+
 Situacion Mundo::getSituacion(std::string identificadorSituacion)
 {
 	return mapaSituaciones[identificadorSituacion];

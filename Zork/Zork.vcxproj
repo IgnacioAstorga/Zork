@@ -146,6 +146,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Consola.h" />
+    <ClInclude Include="Juego.h" />
+    <ClInclude Include="OpcionMoverse.h" />
     <ClInclude Include="Util.h" />
     <ClInclude Include="Opcion.h" />
     <ClInclude Include="Situacion.h" />
@@ -155,9 +157,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Consola.cpp" />
+    <ClCompile Include="Juego.cpp" />
     <ClCompile Include="Mundo.cpp" />
     <ClCompile Include="Opcion.cpp" />
+    <ClCompile Include="OpcionMoverse.cpp" />
     <ClCompile Include="Situacion.cpp" />
+    <ClCompile Include="SituacionInicial.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
