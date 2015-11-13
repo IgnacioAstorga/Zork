@@ -2,11 +2,11 @@
 
 #include "Opcion.h"
 
-//************ VARIABLES *************
-
 //********** CONSTRUCTORES ***********
-Opcion::Opcion(std::string p_descripcion) {
+
+Opcion::Opcion(std::string p_descripcion, std::vector<std::string> p_accionesCompatibles) {
 	descripcion = p_descripcion;
+	accionesCompatibles = p_accionesCompatibles;
 }
 
 Opcion::~Opcion() {
@@ -15,7 +15,6 @@ Opcion::~Opcion() {
 
 //************** MÉTODOS *************
 
-// Propios
 std::string Opcion::getDescripcion()
 {
 	return descripcion;
@@ -36,4 +35,18 @@ void Opcion::imprimirOpcion() {
 	Consola consola = Consola::obtenerInstancia();
 
 	consola.imprimirCadena(getDescripcion());
+}
+
+void Opcion::elegirOpcion(std::string objetivo)
+{
+	unsigned int i;
+	for (i = 0; i < acciones.size(); ++i) {
+		if (!acciones[i]->realizarAccion(objetivo))
+			break;
+	}
+}
+
+void Opcion::addAccion(Accion* accion)
+{
+	acciones.push_back(accion);
 }

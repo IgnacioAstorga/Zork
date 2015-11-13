@@ -13,13 +13,13 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Situaciones">
+    <Filter Include="Archivos de código fuente\Situaciones">
       <UniqueIdentifier>{da1cd295-e1dc-4b0e-a2e6-6bc297aac0ef}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Archivos de código fuente\Opciones">
+    <Filter Include="Archivos de código fuente\Acciones">
       <UniqueIdentifier>{204c3705-2ed7-48bc-9212-d69788c3e3dc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Archivos de encabezado\Opciones">
+    <Filter Include="Archivos de encabezado\Acciones">
       <UniqueIdentifier>{b9d1edc4-20ef-4101-a76b-0c5c36bd8921}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -51,8 +51,17 @@
     <ClInclude Include="Juego.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="OpcionMoverse.h">
-      <Filter>Archivos de encabezado\Opciones</Filter>
+    <ClInclude Include="Accion.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="AccionAbrir.h">
+      <Filter>Archivos de encabezado\Acciones</Filter>
+    </ClInclude>
+    <ClInclude Include="AccionMoverse.h">
+      <Filter>Archivos de encabezado\Acciones</Filter>
+    </ClInclude>
+    <ClInclude Include="AccionFlag.h">
+      <Filter>Archivos de encabezado\Acciones</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -81,10 +90,19 @@
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
     <ClCompile Include="SituacionInicial.cpp">
-      <Filter>Situaciones</Filter>
+      <Filter>Archivos de código fuente\Situaciones</Filter>
     </ClCompile>
-    <ClCompile Include="OpcionMoverse.cpp">
-      <Filter>Archivos de código fuente\Opciones</Filter>
+    <ClCompile Include="I_norte_bandidos.cpp">
+      <Filter>Archivos de código fuente\Situaciones</Filter>
+    </ClCompile>
+    <ClCompile Include="AccionAbrir.cpp">
+      <Filter>Archivos de código fuente\Acciones</Filter>
+    </ClCompile>
+    <ClCompile Include="AccionMoverse.cpp">
+      <Filter>Archivos de código fuente\Acciones</Filter>
+    </ClCompile>
+    <ClCompile Include="AccionFlag.cpp">
+      <Filter>Archivos de código fuente\Acciones</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

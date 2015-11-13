@@ -10,6 +10,7 @@ public:
 	void setJuegoAcabado(bool juegoAcabado);
 	void iniciar();
 	void jugar();
+	void perder();
 
 protected:
 	Juego();

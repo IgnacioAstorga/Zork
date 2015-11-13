@@ -1,9 +1,5 @@
 #include "stdafx.h"
 
-//************ VARIABLES *************
-
-//********** CONSTRUCTORES ***********
-
 //************** MÉTODOS *************
 
 // Propios
@@ -33,7 +29,7 @@ void Situacion::imprimirSituacion()
 	// Muestra la información de cada opción
 	unsigned int i;
 	for (i = 0; i < opciones.size(); ++i) {
-		opciones[i]->imprimirOpcion();
+		opciones[i].imprimirOpcion();
 	}
 
 	// Muestra una línea delimitadora
@@ -44,12 +40,25 @@ void Situacion::elegirOpcion(std::string accion, std::string objetivo)
 {
 	unsigned int i;
 	for (i = 0; i < opciones.size(); ++i) {
-		Opcion* opcion = opciones[i];
-		if (opcion->accionCompatible(accion)) {
-			opcion->elegirOpcion(objetivo);
+		Opcion opcion = opciones[i];
+		if (opcion.accionCompatible(accion)) {
+			opcion.elegirOpcion(objetivo);
 			break;
 		}
 	}
+}
+
+void Situacion::setFlag(std::string flag, int valor)
+{
+	mapaFlags[flag] = valor;
+}
+
+int Situacion::getFlag(std::string flag)
+{
+	if (mapaFlags.count(flag) != 0)
+		return mapaFlags[flag];
+	else
+		return -1;
 }
 
 // Protegidos
@@ -68,7 +77,7 @@ void Situacion::setDescripcion(std::string P_descripcion)
 	descripcion = P_descripcion;
 }
 
-std::vector<Opcion*>* Situacion::getOpciones()
+std::vector<Opcion>* Situacion::getOpciones()
 {
 	return &opciones;
 }

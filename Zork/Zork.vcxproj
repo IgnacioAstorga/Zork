@@ -145,9 +145,12 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Accion.h" />
+    <ClInclude Include="AccionFlag.h" />
     <ClInclude Include="Consola.h" />
     <ClInclude Include="Juego.h" />
-    <ClInclude Include="OpcionMoverse.h" />
+    <ClInclude Include="AccionAbrir.h" />
+    <ClInclude Include="AccionMoverse.h" />
     <ClInclude Include="Util.h" />
     <ClInclude Include="Opcion.h" />
     <ClInclude Include="Situacion.h" />
@@ -156,11 +159,14 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AccionFlag.cpp" />
     <ClCompile Include="Consola.cpp" />
+    <ClCompile Include="I_norte_bandidos.cpp" />
     <ClCompile Include="Juego.cpp" />
     <ClCompile Include="Mundo.cpp" />
     <ClCompile Include="Opcion.cpp" />
-    <ClCompile Include="OpcionMoverse.cpp" />
+    <ClCompile Include="AccionAbrir.cpp" />
+    <ClCompile Include="AccionMoverse.cpp" />
     <ClCompile Include="Situacion.cpp" />
     <ClCompile Include="SituacionInicial.cpp" />
     <ClCompile Include="stdafx.cpp">

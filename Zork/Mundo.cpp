@@ -1,24 +1,17 @@
 #include "stdafx.h"
 
 #include "SituacionInicial.cpp"
-
-#include <unordered_map>
+#include "I_norte_bandidos.cpp"
 
 //************ VARIABLES *************
 Mundo* Mundo::instancia = NULL;
 
-std::unordered_map<std::string, Situacion*> mapaSituaciones;
-
 //********** CONSTRUCTORES ***********
 
 Mundo::Mundo() {
-	// Carga la situación inicial
-	Situacion* situacion = new SituacionInicial();
-	situacion->cargarSituacion();
-	addSituacion(*situacion);
-
-	// Establece la situación inicial
-	setSituacionActual(*situacion);
+	// Carga las situaciones del juego
+	addSituacion(*new SituacionInicial());
+	addSituacion(*new INorteBandidos());
 }
 
 //************** MÉTODOS *************

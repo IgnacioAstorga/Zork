@@ -37,6 +37,9 @@ void Juego::iniciar()
 {
 	Consola consola = Consola::obtenerInstancia();
 
+	// Establece la situación inicial
+	Mundo::obtenerInstancia().setSituacionActual(Mundo::obtenerInstancia().getSituacion("situacion_inicial"));
+
 	// Muestra el mensaje inicial
 	mostrarMensajeInicial(consola);
 	mostrarComandosIniciales(consola);
@@ -104,10 +107,17 @@ void Juego::cerrarJuego() {
 }
 
 void Juego::jugar() {
-	while (!isJuegoAcabado()) {
+	while (true) {
 		// Muestra la información de la situación actual
 		Situacion* situacionActual = &Mundo::obtenerInstancia().getSituacionActual();
+		situacionActual->cargarSituacion();
 		situacionActual->imprimirSituacion();
+
+		// Comprueba si el jugador ha perdido
+		if (isJuegoAcabado()) {
+			perder();
+			break;
+		}
 
 		// Solicita la orden del jugador y la procesa
 		std::string orden = Consola::obtenerInstancia().leerCadena();
@@ -118,4 +128,14 @@ void Juego::jugar() {
 		// Pasa la orden procesada a la situación
 		situacionActual->elegirOpcion(accion, objetivo);
 	}
+
+	// Reinicia el juego
+	iniciar();
+}
+
+void Juego::perder() {
+	Consola consola = Consola::obtenerInstancia();
+	consola.imprimirCadena("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+	consola.imprimirCadena("~~~~~~~~~~~~ GAME OVER ~~~~~~~~~~~~");
+	consola.imprimirCadena("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 }
