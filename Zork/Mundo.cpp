@@ -47,3 +47,13 @@ void Mundo::setSituacionActual(Situacion& situacion)
 {
 	situacionActual = &situacion;
 }
+
+std::string Mundo::getObjetivoActual()
+{
+	return objetivoActual;
+}
+
+void Mundo::setObjetivoActual(std::string p_objetivoActual)
+{
+	objetivoActual = p_objetivoActual;
+}

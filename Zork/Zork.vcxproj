@@ -146,11 +146,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Accion.h" />
+    <ClInclude Include="AccionCondicional.h" />
     <ClInclude Include="AccionFlag.h" />
     <ClInclude Include="Consola.h" />
     <ClInclude Include="Juego.h" />
     <ClInclude Include="AccionAbrir.h" />
     <ClInclude Include="AccionMoverse.h" />
+    <ClInclude Include="Predicado.h" />
+    <ClInclude Include="PredicadoObjetivo.h" />
     <ClInclude Include="Util.h" />
     <ClInclude Include="Opcion.h" />
     <ClInclude Include="Situacion.h" />
@@ -159,6 +162,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AccionCondicional.cpp" />
     <ClCompile Include="AccionFlag.cpp" />
     <ClCompile Include="Consola.cpp" />
     <ClCompile Include="I_norte_bandidos.cpp" />
@@ -167,6 +171,7 @@
     <ClCompile Include="Opcion.cpp" />
     <ClCompile Include="AccionAbrir.cpp" />
     <ClCompile Include="AccionMoverse.cpp" />
+    <ClCompile Include="PredicadoObjetivo.cpp" />
     <ClCompile Include="Situacion.cpp" />
     <ClCompile Include="SituacionInicial.cpp" />
     <ClCompile Include="stdafx.cpp">

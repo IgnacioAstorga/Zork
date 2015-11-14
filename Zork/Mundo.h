@@ -14,6 +14,8 @@ public:
 	Situacion& getSituacion(std::string identificadorSituacion);
 	Situacion& getSituacionActual();
 	void setSituacionActual(Situacion& situacion);
+	std::string getObjetivoActual();
+	void setObjetivoActual(std::string objetivoActual);
 
 protected:
 	Mundo();
@@ -21,5 +23,6 @@ protected:
 private:
 	static Mundo* instancia;
 	Situacion* situacionActual;
+	std::string objetivoActual;
 	std::unordered_map<std::string, Situacion*> mapaSituaciones;
 };

@@ -126,6 +126,7 @@ void Juego::jugar() {
 		std::string objetivo = separado.size() > 1 ? separado[1] : "";
 
 		// Pasa la orden procesada a la situación
+		Mundo::obtenerInstancia().setObjetivoActual(objetivo);
 		situacionActual->elegirOpcion(accion, objetivo);
 	}
 

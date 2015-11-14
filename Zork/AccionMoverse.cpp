@@ -34,7 +34,7 @@ bool AccionMoverse::realizarAccion(std::string objetivo)
 		situacion = &Mundo::obtenerInstancia().getSituacion(abajo);
 	}
 	else {
-		Consola::obtenerInstancia().imprimirCadena("-> " + objetivo + " is not a valid direction.");
+		Consola::obtenerInstancia().imprimirCadena("\n-> " + objetivo + " is not a valid direction.\n");
 		return false;
 	}
 	Mundo::obtenerInstancia().setSituacionActual(*situacion);

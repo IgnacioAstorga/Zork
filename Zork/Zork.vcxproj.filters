@@ -22,6 +22,12 @@
     <Filter Include="Archivos de encabezado\Acciones">
       <UniqueIdentifier>{b9d1edc4-20ef-4101-a76b-0c5c36bd8921}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Archivos de código fuente\Predicados">
+      <UniqueIdentifier>{0fcb62ac-fa25-4fda-9857-f9047dd77031}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Predicados">
+      <UniqueIdentifier>{20a3beaf-c7eb-4532-a149-8f03bf0459bd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -63,6 +69,15 @@
     <ClInclude Include="AccionFlag.h">
       <Filter>Archivos de encabezado\Acciones</Filter>
     </ClInclude>
+    <ClInclude Include="AccionCondicional.h">
+      <Filter>Archivos de encabezado\Acciones</Filter>
+    </ClInclude>
+    <ClInclude Include="Predicado.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="PredicadoObjetivo.h">
+      <Filter>Archivos de encabezado\Predicados</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -103,6 +118,12 @@
     </ClCompile>
     <ClCompile Include="AccionFlag.cpp">
       <Filter>Archivos de código fuente\Acciones</Filter>
+    </ClCompile>
+    <ClCompile Include="AccionCondicional.cpp">
+      <Filter>Archivos de código fuente\Acciones</Filter>
+    </ClCompile>
+    <ClCompile Include="PredicadoObjetivo.cpp">
+      <Filter>Archivos de código fuente\Predicados</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
