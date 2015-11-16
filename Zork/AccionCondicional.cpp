@@ -2,23 +2,34 @@
 
 #include "AccionCondicional.h"
 
-AccionCondicional::AccionCondicional(Predicado* p_condicion, Accion* p_onExito)
-	: AccionCondicional(p_condicion, p_onExito, NULL) {}
-
-AccionCondicional::AccionCondicional(Predicado* p_condicion, Accion* p_onExito, Accion* p_onFallo)
+AccionCondicional::AccionCondicional(Predicado* p_condicion, Accion* p_acciones)
 {
-	onFallo = p_onFallo;
+	condicion = p_condicion;
+	acciones = { p_acciones };
+}
+
+AccionCondicional::AccionCondicional(Predicado * p_condicion, std::vector<Accion*> p_acciones)
+{
+	condicion = p_condicion;
+	acciones = p_acciones;
 }
 
 bool AccionCondicional::realizarAccion(std::string p_objetivo)
 {
-	if (condicion->esCierto() && onExito != NULL) {
-		return onExito->realizarAccion(p_objetivo);
+	bool cierto = condicion->esCierto();
+	if (cierto) {
+		unsigned int i = 0;
+		for (i = 0; i < acciones.size(); ++i)
+			if (acciones[i] != NULL)
+				cierto &= acciones[i]->realizarAccion(p_objetivo);
 	}
-	else if (!condicion->esCierto() && onFallo != NULL) {
-		return onFallo->realizarAccion(p_objetivo);
-	}
-	else {
-		return true;	// Las situaciones condicionales no producen errores por no cumplirse
-	}
+
+	return cierto;
+}
+
+void AccionCondicional::imprimirAccion()
+{
+	unsigned int i = 0;
+	for (i = 0; i < acciones.size(); ++i)
+		acciones[i]->imprimirAccion();
 }

@@ -1,7 +1,7 @@
 #include "stdafx.h"
 
 #include "SituacionInicial.cpp"
-#include "I_norte_bandidos.cpp"
+#include "SEntradaCasa.cpp"
 
 //************ VARIABLES *************
 Mundo* Mundo::instancia = NULL;
@@ -11,7 +11,7 @@ Mundo* Mundo::instancia = NULL;
 Mundo::Mundo() {
 	// Carga las situaciones del juego
 	addSituacion(*new SituacionInicial());
-	addSituacion(*new INorteBandidos());
+	addSituacion(*new SEntradaCasa());
 }
 
 //************** MÉTODOS *************

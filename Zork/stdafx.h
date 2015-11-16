@@ -20,4 +20,6 @@
 #include "Util.h"
 #include "Consola.h"
 #include "Mundo.h"
+#include "Objeto.h"
+#include "Personaje.h"
 #include "Juego.h"

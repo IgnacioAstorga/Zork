@@ -4,8 +4,7 @@
 
 //********** CONSTRUCTORES ***********
 
-Opcion::Opcion(std::string p_descripcion, std::vector<std::string> p_accionesCompatibles) {
-	descripcion = p_descripcion;
+Opcion::Opcion(std::vector<std::string> p_accionesCompatibles) {
 	accionesCompatibles = p_accionesCompatibles;
 }
 
@@ -14,11 +13,6 @@ Opcion::~Opcion() {
 }
 
 //************** MÉTODOS *************
-
-std::string Opcion::getDescripcion()
-{
-	return descripcion;
-}
 
 bool Opcion::accionCompatible(std::string accion)
 {
@@ -32,18 +26,19 @@ bool Opcion::accionCompatible(std::string accion)
 }
 
 void Opcion::imprimirOpcion() {
-	Consola consola = Consola::obtenerInstancia();
-
-	consola.imprimirCadena(getDescripcion());
+	unsigned int i;
+	for (i = 0; i < acciones.size(); ++i)
+		acciones[i]->imprimirAccion();
 }
 
 void Opcion::elegirOpcion(std::string objetivo)
 {
 	unsigned int i;
-	for (i = 0; i < acciones.size(); ++i) {
-		if (!acciones[i]->realizarAccion(objetivo))
-			break;
-	}
+	bool algunaCorrecta = false;
+	for (i = 0; i < acciones.size(); ++i)
+		algunaCorrecta |= acciones[i]->realizarAccion(objetivo);
+	if (!algunaCorrecta)
+		Consola::obtenerInstancia().imprimirCadena("\n-> " + objetivo + " is not a valid target.\n");
 }
 
 void Opcion::addAccion(Accion* accion)

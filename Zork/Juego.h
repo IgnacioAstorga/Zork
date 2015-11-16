@@ -10,7 +10,7 @@ public:
 	void setJuegoAcabado(bool juegoAcabado);
 	void iniciar();
 	void jugar();
-	void perder();
+	void perder(std::string mensaje);
 
 protected:
 	Juego();

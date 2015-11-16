@@ -43,9 +43,10 @@ void Situacion::elegirOpcion(std::string accion, std::string objetivo)
 		Opcion opcion = opciones[i];
 		if (opcion.accionCompatible(accion)) {
 			opcion.elegirOpcion(objetivo);
-			break;
+			return;
 		}
 	}
+	Consola::obtenerInstancia().imprimirCadena("\n-> " + accion + " is not a valid action.\n");
 }
 
 void Situacion::setFlag(std::string flag, int valor)

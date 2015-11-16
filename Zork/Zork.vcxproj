@@ -147,13 +147,21 @@
   <ItemGroup>
     <ClInclude Include="Accion.h" />
     <ClInclude Include="AccionCondicional.h" />
+    <ClInclude Include="AccionConMensaje.h" />
+    <ClInclude Include="AccionConseguirObjeto.h" />
     <ClInclude Include="AccionFlag.h" />
+    <ClInclude Include="AccionPerder.h" />
     <ClInclude Include="Consola.h" />
     <ClInclude Include="Juego.h" />
-    <ClInclude Include="AccionAbrir.h" />
-    <ClInclude Include="AccionMoverse.h" />
+    <ClInclude Include="AccionCambiarSituacion.h" />
+    <ClInclude Include="Objeto.h" />
+    <ClInclude Include="Personaje.h" />
     <ClInclude Include="Predicado.h" />
+    <ClInclude Include="PredicadoAND.h" />
+    <ClInclude Include="PredicadoFlag.h" />
+    <ClInclude Include="PredicadoNOT.h" />
     <ClInclude Include="PredicadoObjetivo.h" />
+    <ClInclude Include="PredicadoOR.h" />
     <ClInclude Include="Util.h" />
     <ClInclude Include="Opcion.h" />
     <ClInclude Include="Situacion.h" />
@@ -163,15 +171,23 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AccionCondicional.cpp" />
+    <ClCompile Include="AccionConMensaje.cpp" />
+    <ClCompile Include="AccionConseguirObjeto.cpp" />
     <ClCompile Include="AccionFlag.cpp" />
+    <ClCompile Include="AccionPerder.cpp" />
     <ClCompile Include="Consola.cpp" />
-    <ClCompile Include="I_norte_bandidos.cpp" />
     <ClCompile Include="Juego.cpp" />
     <ClCompile Include="Mundo.cpp" />
+    <ClCompile Include="Objeto.cpp" />
     <ClCompile Include="Opcion.cpp" />
-    <ClCompile Include="AccionAbrir.cpp" />
-    <ClCompile Include="AccionMoverse.cpp" />
+    <ClCompile Include="AccionCambiarSituacion.cpp" />
+    <ClCompile Include="Personaje.cpp" />
+    <ClCompile Include="PredicadoAND.cpp" />
+    <ClCompile Include="PredicadoFlag.cpp" />
+    <ClCompile Include="PredicadoNOT.cpp" />
     <ClCompile Include="PredicadoObjetivo.cpp" />
+    <ClCompile Include="PredicadoOR.cpp" />
+    <ClCompile Include="SEntradaCasa.cpp" />
     <ClCompile Include="Situacion.cpp" />
     <ClCompile Include="SituacionInicial.cpp" />
     <ClCompile Include="stdafx.cpp">

@@ -2,17 +2,21 @@
 
 #include "PredicadoObjetivo.h"
 
-PredicadoObjetivo::PredicadoObjetivo(std::string p_objetivo)
-	: PredicadoObjetivo(p_objetivo, true) {}
+PredicadoObjetivo::PredicadoObjetivo(std::vector<std::string> p_objetivos)
+	: PredicadoObjetivo(p_objetivos, true) {}
 
-PredicadoObjetivo::PredicadoObjetivo(std::string p_objetivo, bool p_cierto)
+PredicadoObjetivo::PredicadoObjetivo(std::vector<std::string> p_objetivos, bool p_cierto)
 {
-	objetivo = p_objetivo;
+	objetivos = p_objetivos;
 	cierto = p_cierto;
 }
 
 bool PredicadoObjetivo::esCierto()
 {
-	bool resultado = Mundo::obtenerInstancia().getObjetivoActual() == objetivo;
-	return cierto ? resultado : !resultado;
+	unsigned int i = 0;
+	for (i = 0; i < objetivos.size(); ++i) {
+		if (Mundo::obtenerInstancia().getObjetivoActual() == objetivos[i])
+			return cierto;
+	}
+	return !cierto;
 }

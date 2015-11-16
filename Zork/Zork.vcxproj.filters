@@ -60,12 +60,6 @@
     <ClInclude Include="Accion.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="AccionAbrir.h">
-      <Filter>Archivos de encabezado\Acciones</Filter>
-    </ClInclude>
-    <ClInclude Include="AccionMoverse.h">
-      <Filter>Archivos de encabezado\Acciones</Filter>
-    </ClInclude>
     <ClInclude Include="AccionFlag.h">
       <Filter>Archivos de encabezado\Acciones</Filter>
     </ClInclude>
@@ -76,6 +70,36 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="PredicadoObjetivo.h">
+      <Filter>Archivos de encabezado\Predicados</Filter>
+    </ClInclude>
+    <ClInclude Include="AccionPerder.h">
+      <Filter>Archivos de encabezado\Acciones</Filter>
+    </ClInclude>
+    <ClInclude Include="AccionConseguirObjeto.h">
+      <Filter>Archivos de encabezado\Acciones</Filter>
+    </ClInclude>
+    <ClInclude Include="Personaje.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Objeto.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="AccionCambiarSituacion.h">
+      <Filter>Archivos de encabezado\Acciones</Filter>
+    </ClInclude>
+    <ClInclude Include="AccionConMensaje.h">
+      <Filter>Archivos de encabezado\Acciones</Filter>
+    </ClInclude>
+    <ClInclude Include="PredicadoAND.h">
+      <Filter>Archivos de encabezado\Predicados</Filter>
+    </ClInclude>
+    <ClInclude Include="PredicadoOR.h">
+      <Filter>Archivos de encabezado\Predicados</Filter>
+    </ClInclude>
+    <ClInclude Include="PredicadoNOT.h">
+      <Filter>Archivos de encabezado\Predicados</Filter>
+    </ClInclude>
+    <ClInclude Include="PredicadoFlag.h">
       <Filter>Archivos de encabezado\Predicados</Filter>
     </ClInclude>
   </ItemGroup>
@@ -107,15 +131,6 @@
     <ClCompile Include="SituacionInicial.cpp">
       <Filter>Archivos de código fuente\Situaciones</Filter>
     </ClCompile>
-    <ClCompile Include="I_norte_bandidos.cpp">
-      <Filter>Archivos de código fuente\Situaciones</Filter>
-    </ClCompile>
-    <ClCompile Include="AccionAbrir.cpp">
-      <Filter>Archivos de código fuente\Acciones</Filter>
-    </ClCompile>
-    <ClCompile Include="AccionMoverse.cpp">
-      <Filter>Archivos de código fuente\Acciones</Filter>
-    </ClCompile>
     <ClCompile Include="AccionFlag.cpp">
       <Filter>Archivos de código fuente\Acciones</Filter>
     </ClCompile>
@@ -124,6 +139,39 @@
     </ClCompile>
     <ClCompile Include="PredicadoObjetivo.cpp">
       <Filter>Archivos de código fuente\Predicados</Filter>
+    </ClCompile>
+    <ClCompile Include="AccionPerder.cpp">
+      <Filter>Archivos de código fuente\Acciones</Filter>
+    </ClCompile>
+    <ClCompile Include="SEntradaCasa.cpp">
+      <Filter>Archivos de código fuente\Situaciones</Filter>
+    </ClCompile>
+    <ClCompile Include="AccionConseguirObjeto.cpp">
+      <Filter>Archivos de código fuente\Acciones</Filter>
+    </ClCompile>
+    <ClCompile Include="Objeto.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="AccionCambiarSituacion.cpp">
+      <Filter>Archivos de código fuente\Acciones</Filter>
+    </ClCompile>
+    <ClCompile Include="AccionConMensaje.cpp">
+      <Filter>Archivos de código fuente\Acciones</Filter>
+    </ClCompile>
+    <ClCompile Include="PredicadoAND.cpp">
+      <Filter>Archivos de código fuente\Predicados</Filter>
+    </ClCompile>
+    <ClCompile Include="PredicadoOR.cpp">
+      <Filter>Archivos de código fuente\Predicados</Filter>
+    </ClCompile>
+    <ClCompile Include="PredicadoNOT.cpp">
+      <Filter>Archivos de código fuente\Predicados</Filter>
+    </ClCompile>
+    <ClCompile Include="PredicadoFlag.cpp">
+      <Filter>Archivos de código fuente\Predicados</Filter>
+    </ClCompile>
+    <ClCompile Include="Personaje.cpp">
+      <Filter>Archivos de código fuente</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
