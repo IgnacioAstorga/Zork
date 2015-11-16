@@ -12,9 +12,7 @@ Personaje::Personaje() {};
 
 // Estáticos
 void Personaje::inicializar() {
-	if (instancia == NULL) {
-		instancia = new Personaje();
-	}
+	instancia = new Personaje();
 }
 
 Personaje& Personaje::obtenerInstancia()
@@ -26,4 +24,17 @@ Personaje& Personaje::obtenerInstancia()
 void Personaje::addObjeto(Objeto* objeto)
 {
 	inventario[objeto->getCodigoObjeto()] = objeto;
+}
+
+bool Personaje::tieneObjeto(std::string codigoObjeto)
+{
+	return inventario.count(codigoObjeto) > 0;
+}
+
+Objeto* Personaje::getObjeto(std::string codigoObjeto)
+{
+	if (!tieneObjeto(codigoObjeto))
+		return NULL;
+	else
+		return inventario[codigoObjeto];
 }

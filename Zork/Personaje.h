@@ -8,6 +8,8 @@ public:
 	static Personaje& obtenerInstancia();
 
 	void addObjeto(Objeto* objeto);
+	bool tieneObjeto(std::string codigoObjeto);
+	Objeto* getObjeto(std::string codigoObjeto);
 
 protected:
 	Personaje();

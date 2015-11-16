@@ -28,6 +28,9 @@
     <Filter Include="Archivos de encabezado\Predicados">
       <UniqueIdentifier>{20a3beaf-c7eb-4532-a149-8f03bf0459bd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Archivos de encabezado\Situaciones">
+      <UniqueIdentifier>{ac01a23f-1791-4bd0-aa00-7e9c7bd43707}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -102,6 +105,24 @@
     <ClInclude Include="PredicadoFlag.h">
       <Filter>Archivos de encabezado\Predicados</Filter>
     </ClInclude>
+    <ClInclude Include="AccionAlternativa.h">
+      <Filter>Archivos de encabezado\Acciones</Filter>
+    </ClInclude>
+    <ClInclude Include="PredicadoTieneObjeto.h">
+      <Filter>Archivos de encabezado\Predicados</Filter>
+    </ClInclude>
+    <ClInclude Include="SituacionInicial.h">
+      <Filter>Archivos de encabezado\Situaciones</Filter>
+    </ClInclude>
+    <ClInclude Include="SEntradaCasa.h">
+      <Filter>Archivos de encabezado\Situaciones</Filter>
+    </ClInclude>
+    <ClInclude Include="SInteriorCasa.h">
+      <Filter>Archivos de encabezado\Situaciones</Filter>
+    </ClInclude>
+    <ClInclude Include="SPasilloCasa.h">
+      <Filter>Archivos de encabezado\Situaciones</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -172,6 +193,18 @@
     </ClCompile>
     <ClCompile Include="Personaje.cpp">
       <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="AccionAlternativa.cpp">
+      <Filter>Archivos de código fuente\Acciones</Filter>
+    </ClCompile>
+    <ClCompile Include="PredicadoTieneObjeto.cpp">
+      <Filter>Archivos de código fuente\Predicados</Filter>
+    </ClCompile>
+    <ClCompile Include="SInteriorCasa.cpp">
+      <Filter>Archivos de código fuente\Situaciones</Filter>
+    </ClCompile>
+    <ClCompile Include="SPasilloCasa.cpp">
+      <Filter>Archivos de código fuente\Situaciones</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

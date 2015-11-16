@@ -2,7 +2,6 @@ e:\users\nacho\documents\github\zork\zork\debug\zork.pch
 e:\users\nacho\documents\github\zork\zork\debug\vc140.pdb
 e:\users\nacho\documents\github\zork\zork\debug\vc140.idb
 e:\users\nacho\documents\github\zork\zork\debug\stdafx.obj
-e:\users\nacho\documents\github\zork\zork\debug\accionconseguirobjeto.obj
 e:\users\nacho\documents\github\zork\zork\debug\accionflag.obj
 e:\users\nacho\documents\github\zork\zork\debug\accionperder.obj
 e:\users\nacho\documents\github\zork\zork\debug\consola.obj
@@ -17,13 +16,18 @@ e:\users\nacho\documents\github\zork\zork\debug\predicadoflag.obj
 e:\users\nacho\documents\github\zork\zork\debug\predicadonot.obj
 e:\users\nacho\documents\github\zork\zork\debug\predicadoobjetivo.obj
 e:\users\nacho\documents\github\zork\zork\debug\predicadoor.obj
+e:\users\nacho\documents\github\zork\zork\debug\predicadotieneobjeto.obj
 e:\users\nacho\documents\github\zork\zork\debug\sentradacasa.obj
 e:\users\nacho\documents\github\zork\zork\debug\situacion.obj
 e:\users\nacho\documents\github\zork\zork\debug\situacioninicial.obj
 e:\users\nacho\documents\github\zork\zork\debug\util.obj
 e:\users\nacho\documents\github\zork\zork\debug\zork.obj
+e:\users\nacho\documents\github\zork\zork\debug\accionalternativa.obj
 e:\users\nacho\documents\github\zork\zork\debug\accioncondicional.obj
 e:\users\nacho\documents\github\zork\zork\debug\accionconmensaje.obj
+e:\users\nacho\documents\github\zork\zork\debug\accionconseguirobjeto.obj
+e:\users\nacho\documents\github\zork\zork\debug\sinteriorcasa.obj
+e:\users\nacho\documents\github\zork\zork\debug\spasillocasa.obj
 e:\users\nacho\documents\github\zork\debug\zork.ilk
 e:\users\nacho\documents\github\zork\debug\zork.exe
 e:\users\nacho\documents\github\zork\debug\zork.pdb

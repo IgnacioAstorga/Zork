@@ -12,9 +12,7 @@ Consola::Consola() {};
 
 // Estáticos
 void Consola::inicializar() {
-	if (instancia == NULL) {
-		instancia = new Consola();
-	}
+	instancia = new Consola();
 }
 
 Consola& Consola::obtenerInstancia()

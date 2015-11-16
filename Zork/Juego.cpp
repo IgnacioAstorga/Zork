@@ -12,9 +12,7 @@ Juego::Juego() {};
 
 // Estáticos
 void Juego::inicializar() {
-	if (instancia == NULL) {
-		instancia = new Juego();
-	}
+	instancia = new Juego();
 }
 
 Juego& Juego::obtenerInstancia()
@@ -36,6 +34,12 @@ void Juego::setJuegoAcabado(bool p_juegoAcabado)
 void Juego::iniciar()
 {
 	Consola consola = Consola::obtenerInstancia();
+
+	// Inicia el mundo
+	Mundo::inicializar();
+
+	// Inicia el personaje
+	Personaje::inicializar();
 
 	// Establece la situación inicial
 	Mundo::obtenerInstancia().setSituacionActual(Mundo::obtenerInstancia().getSituacion("situacion_inicial"));

@@ -1,7 +1,9 @@
 #include "stdafx.h"
 
-#include "SituacionInicial.cpp"
-#include "SEntradaCasa.cpp"
+#include "SituacionInicial.h"
+#include "SEntradaCasa.h"
+#include "SInteriorCasa.h"
+#include "SPasilloCasa.h"
 
 //************ VARIABLES *************
 Mundo* Mundo::instancia = NULL;
@@ -12,15 +14,15 @@ Mundo::Mundo() {
 	// Carga las situaciones del juego
 	addSituacion(*new SituacionInicial());
 	addSituacion(*new SEntradaCasa());
+	addSituacion(*new SInteriorCasa());
+	addSituacion(*new SPasilloCasa());
 }
 
 //************** MÉTODOS *************
 
 // Estáticos
 void Mundo::inicializar() {
-	if (instancia == NULL) {
-		instancia = new Mundo();
-	}
+	instancia = new Mundo();
 }
 
 Mundo& Mundo::obtenerInstancia()

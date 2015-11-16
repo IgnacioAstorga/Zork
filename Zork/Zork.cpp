@@ -6,12 +6,6 @@ int _tmain(int argc, _TCHAR* argv[]) {
 	// Inicia la consola
 	Consola::inicializar();
 
-	// Inicia el mundo
-	Mundo::inicializar();
-
-	// Inicia el personaje
-	Personaje::inicializar();
-
 	// Inicia el juego
 	Juego::inicializar();
 	Juego::obtenerInstancia().iniciar();

@@ -146,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Accion.h" />
+    <ClInclude Include="AccionAlternativa.h" />
     <ClInclude Include="AccionCondicional.h" />
     <ClInclude Include="AccionConMensaje.h" />
     <ClInclude Include="AccionConseguirObjeto.h" />
@@ -162,6 +163,11 @@
     <ClInclude Include="PredicadoNOT.h" />
     <ClInclude Include="PredicadoObjetivo.h" />
     <ClInclude Include="PredicadoOR.h" />
+    <ClInclude Include="PredicadoTieneObjeto.h" />
+    <ClInclude Include="SEntradaCasa.h" />
+    <ClInclude Include="SInteriorCasa.h" />
+    <ClInclude Include="SituacionInicial.h" />
+    <ClInclude Include="SPasilloCasa.h" />
     <ClInclude Include="Util.h" />
     <ClInclude Include="Opcion.h" />
     <ClInclude Include="Situacion.h" />
@@ -170,6 +176,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AccionAlternativa.cpp" />
     <ClCompile Include="AccionCondicional.cpp" />
     <ClCompile Include="AccionConMensaje.cpp" />
     <ClCompile Include="AccionConseguirObjeto.cpp" />
@@ -187,9 +194,12 @@
     <ClCompile Include="PredicadoNOT.cpp" />
     <ClCompile Include="PredicadoObjetivo.cpp" />
     <ClCompile Include="PredicadoOR.cpp" />
+    <ClCompile Include="PredicadoTieneObjeto.cpp" />
     <ClCompile Include="SEntradaCasa.cpp" />
+    <ClCompile Include="SInteriorCasa.cpp" />
     <ClCompile Include="Situacion.cpp" />
     <ClCompile Include="SituacionInicial.cpp" />
+    <ClCompile Include="SPasilloCasa.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
