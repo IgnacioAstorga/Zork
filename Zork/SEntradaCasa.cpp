@@ -12,8 +12,6 @@
 #include "PredicadoObjetivo.h"
 #include "PredicadoTieneObjeto.h"
 
-#include "Objeto.h"
-
 SEntradaCasa::SEntradaCasa() {
 
 	// Establece el código de la situación
@@ -66,7 +64,7 @@ void SEntradaCasa::cargarSituacion() {
 	// Crea la opción de coger la llave del felpudo
 	if (getFlag("llave_conseguida") != 1) {
 		opcion = new Opcion({ "look", "search", "examine", "inspect", "lift", "raise" });
-		opcion->addAccion(new AccionCondicional(new PredicadoObjetivo({ "doormat", "mat" }), { new AccionFlag("* There seems to be a bulge on the doormat.", "entrada_casa", "llave_conseguida", 2), new AccionConseguirObjeto(new Objeto("llave_entrada_casa")) }));
+		opcion->addAccion(new AccionCondicional(new PredicadoObjetivo({ "doormat", "mat" }), { new AccionFlag("* There seems to be a bulge on the doormat.", "entrada_casa", "llave_conseguida", 2), new AccionConseguirObjeto(new Objeto("llave_entrada_casa", { "key" })) }));
 		getOpciones()->push_back(*opcion);
 	}
 }

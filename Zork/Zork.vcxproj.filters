@@ -123,6 +123,12 @@
     <ClInclude Include="SPasilloCasa.h">
       <Filter>Archivos de encabezado\Situaciones</Filter>
     </ClInclude>
+    <ClInclude Include="AccionSoltarObjeto.h">
+      <Filter>Archivos de encabezado\Acciones</Filter>
+    </ClInclude>
+    <ClInclude Include="AccionCogerObjeto.h">
+      <Filter>Archivos de encabezado\Acciones</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -205,6 +211,12 @@
     </ClCompile>
     <ClCompile Include="SPasilloCasa.cpp">
       <Filter>Archivos de código fuente\Situaciones</Filter>
+    </ClCompile>
+    <ClCompile Include="AccionSoltarObjeto.cpp">
+      <Filter>Archivos de código fuente\Acciones</Filter>
+    </ClCompile>
+    <ClCompile Include="AccionCogerObjeto.cpp">
+      <Filter>Archivos de código fuente\Acciones</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -7,8 +7,8 @@
 class PredicadoObjetivo : public Predicado {
 
 public:
-	PredicadoObjetivo(std::vector<std::string> objetivos);
-	PredicadoObjetivo(std::vector<std::string> objetivos, bool cierto);
+	PredicadoObjetivo(const std::vector<std::string> objetivos);
+	PredicadoObjetivo(const std::vector<std::string> objetivos, bool cierto);
 	virtual bool esCierto();
 
 private:

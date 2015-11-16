@@ -8,7 +8,7 @@ class PredicadoOR : public Predicado {
 
 public:
 	PredicadoOR(Predicado* predicado1, Predicado* predicado2);
-	PredicadoOR(std::vector<Predicado*> predicados);
+	PredicadoOR(const std::vector<Predicado*> predicados);
 	virtual bool esCierto();
 
 private:

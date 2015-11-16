@@ -1,19 +1,24 @@
 #include "stdafx.h"
 
+#include "AccionCondicional.h"
+#include "AccionCogerObjeto.h"
+
+#include "PredicadoObjetivo.h"
+
 //************** MÉTODOS *************
 
 // Propios
-std::string Situacion::getCodigoSituacion()
+const std::string Situacion::getCodigoSituacion()
 {
 	return codigoSituacion;
 }
 
-std::string Situacion::getNombre()
+const std::string Situacion::getNombre()
 {
 	return nombre;
 }
 
-std::string Situacion::getDescripcion()
+const std::string Situacion::getDescripcion()
 {
 	return descripcion;
 }
@@ -49,6 +54,33 @@ void Situacion::elegirOpcion(std::string accion, std::string objetivo)
 	Consola::obtenerInstancia().imprimirCadena("\n-> " + accion + " is not a valid action.\n");
 }
 
+void Situacion::addObjeto(Objeto* objeto)
+{
+	objetos[objeto->getCodigoObjeto()] = objeto;
+}
+
+void Situacion::removeObjeto(Objeto* objeto)
+{
+	objetos.erase(objeto->getCodigoObjeto());
+}
+
+Objeto* Situacion::getObjeto(std::string codigoObjeto)
+{
+	if (objetos.count(codigoObjeto) == 0)
+		return NULL;
+	else
+		return objetos[codigoObjeto];
+}
+
+Objeto* Situacion::getObjetoPorNombre(std::string nombre)
+{
+	std::unordered_map<std::string, Objeto*>::iterator it;
+	for (it = objetos.begin(); it != objetos.end(); ++it)
+		if (it->second != NULL && it->second->tieneNombre(nombre))
+			return it->second;
+	return NULL;
+}
+
 void Situacion::setFlag(std::string flag, int valor)
 {
 	mapaFlags[flag] = valor;
@@ -60,6 +92,16 @@ int Situacion::getFlag(std::string flag)
 		return mapaFlags[flag];
 	else
 		return -1;
+}
+
+void Situacion::cargarOpcionesDeObjetos()
+{
+	std::unordered_map<std::string, Objeto*>::iterator it;
+	for (it = objetos.begin(); it != objetos.end(); ++it) {
+		Opcion* opcion = new Opcion({ "pick", "take" });
+		opcion->addAccion(new AccionCondicional(new PredicadoObjetivo(it->second->getNombres()), new AccionCogerObjeto("* There is a " + it->second->getNombres()[0] + " near by.", it->second)));
+		opciones.push_back(*opcion);
+	}
 }
 
 // Protegidos

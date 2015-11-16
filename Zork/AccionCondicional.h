@@ -8,8 +8,8 @@ class AccionCondicional : public Accion {
 
 public:
 	AccionCondicional(Predicado* condicion, Accion* acciones);
-	AccionCondicional(Predicado* condicion, std::vector<Accion*> acciones);
-	virtual bool realizarAccion(std::string objetivo);
+	AccionCondicional(Predicado* condicion, const std::vector<Accion*> acciones);
+	virtual bool realizarAccion(const std::string objetivo);
 	virtual void imprimirAccion();
 
 private:

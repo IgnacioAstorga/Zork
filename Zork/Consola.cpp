@@ -26,7 +26,7 @@ void Consola::imprimirCadena(std::string cadena)
 	std::cout << cadena << "\n";
 }
 
-std::string Consola::leerCadena()
+const std::string Consola::leerCadena()
 {
 	std::string cadena;
 	std::getline(std::cin, cadena);

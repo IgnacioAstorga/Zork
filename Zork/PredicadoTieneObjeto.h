@@ -7,8 +7,8 @@
 class PredicadoTieneObjeto : public Predicado {
 
 public:
-	PredicadoTieneObjeto(std::string codigoObjeto);
-	PredicadoTieneObjeto(std::string codigoObjeto, bool cierto);
+	PredicadoTieneObjeto(const std::string codigoObjeto);
+	PredicadoTieneObjeto(const std::string codigoObjeto, bool cierto);
 	virtual bool esCierto();
 
 private:

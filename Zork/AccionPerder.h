@@ -7,9 +7,9 @@
 class AccionPerder : public AccionConMensaje {
 
 public:
-	AccionPerder(std::string mensajeDerrota);
-	AccionPerder(std::string mensaje, std::string mensajeDerrota);
-	virtual bool realizarAccion(std::string objetivo);
+	AccionPerder(const std::string mensajeDerrota);
+	AccionPerder(const std::string mensaje, const std::string mensajeDerrota);
+	virtual bool realizarAccion(const std::string objetivo);
 
 private:
 	std::string mensajeDerrota;

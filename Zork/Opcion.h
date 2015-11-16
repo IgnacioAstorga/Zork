@@ -8,9 +8,9 @@ class Opcion {
 public:
 	Opcion(std::vector<std::string> accionesCompatibles);
 	virtual ~Opcion();
-	bool accionCompatible(std::string accion);
+	bool accionCompatible(const std::string accion);
 	void imprimirOpcion();
-	void elegirOpcion(std::string objetivo);
+	void elegirOpcion(const std::string objetivo);
 	void addAccion(Accion* accion);
 
 protected:

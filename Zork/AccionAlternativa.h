@@ -8,7 +8,7 @@ class AccionAlternativa : public Accion {
 
 public:
 	AccionAlternativa(Predicado* condicion, Accion* onCierto, Accion* onFalso);
-	virtual bool realizarAccion(std::string objetivo);
+	virtual bool realizarAccion(const std::string objetivo);
 	virtual void imprimirAccion();
 
 private:

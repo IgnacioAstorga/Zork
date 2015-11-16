@@ -1,12 +1,24 @@
 #include "stdafx.h"
 
+#include "AccionSoltarObjeto.h"
+
 //************ VARIABLES *************
 
 Juego* Juego::instancia = NULL;
 
 //********** CONSTRUCTORES ***********
 
-Juego::Juego() {};
+Juego::Juego() {
+
+	// Crea las opciones globales
+	opcionesGlobales.clear();
+	Opcion* opcion;
+
+	// Crea la opción de soltar objeto
+	opcion = new Opcion({ "drop", "release", "throw" });
+	opcion->addAccion(new AccionSoltarObjeto());
+	opcionesGlobales.push_back(opcion);
+};
 
 //************** MÉTODOS *************
 
@@ -115,6 +127,7 @@ void Juego::jugar() {
 		// Muestra la información de la situación actual
 		Situacion* situacionActual = &Mundo::obtenerInstancia().getSituacionActual();
 		situacionActual->cargarSituacion();
+		situacionActual->cargarOpcionesDeObjetos();
 		situacionActual->imprimirSituacion();
 
 		// Solicita la orden del jugador y la procesa
@@ -122,10 +135,12 @@ void Juego::jugar() {
 		std::vector<std::string> separado = separarCadena(orden, ' ');
 		std::string accion = separado[0];
 		std::string objetivo = separado.size() > 1 ? separado[1] : "";
-
-		// Pasa la orden procesada a la situación
 		Mundo::obtenerInstancia().setObjetivoActual(objetivo);
-		situacionActual->elegirOpcion(accion, objetivo);
+
+		// Primero comprueba si la orden es global
+		if (!elegirOpcionGlobal(accion, objetivo))
+			// Pasa la orden procesada a la situación
+			situacionActual->elegirOpcion(accion, objetivo);
 	}
 
 	// Reinicia el juego
@@ -141,4 +156,16 @@ void Juego::perder(std::string mensaje) {
 	consola.imprimirCadena("");
 
 	setJuegoAcabado(true);
+}
+
+bool Juego::elegirOpcionGlobal(std::string accion, std::string objetivo) {
+	unsigned int i;
+	for (i = 0; i < opcionesGlobales.size(); ++i) {
+		Opcion* opcion = opcionesGlobales[i];
+		if (opcion->accionCompatible(accion)) {
+			opcion->elegirOpcion(objetivo);
+			return true;
+		}
+	}
+	return false;
 }

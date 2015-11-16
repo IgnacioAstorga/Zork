@@ -5,7 +5,7 @@
 class AccionConMensaje : public Accion {
 
 public:
-	AccionConMensaje(std::string mensaje);
+	AccionConMensaje(const std::string mensaje);
 	virtual void imprimirAccion();
 
 private:

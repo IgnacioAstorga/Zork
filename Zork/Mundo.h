@@ -11,11 +11,11 @@ public:
 	static void inicializar();
 	static Mundo& obtenerInstancia();
 	void addSituacion(Situacion& situacion);
-	Situacion& getSituacion(std::string identificadorSituacion);
+	Situacion& getSituacion(const std::string identificadorSituacion);
 	Situacion& getSituacionActual();
 	void setSituacionActual(Situacion& situacion);
-	std::string getObjetivoActual();
-	void setObjetivoActual(std::string objetivoActual);
+	const std::string getObjetivoActual();
+	void setObjetivoActual(const std::string objetivoActual);
 
 protected:
 	Mundo();

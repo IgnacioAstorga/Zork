@@ -7,8 +7,8 @@ public:
 	static void inicializar();
 	static Consola& obtenerInstancia();
 
-	void imprimirCadena(std::string cadena);
-	std::string leerCadena();
+	void imprimirCadena(const std::string cadena);
+	const std::string leerCadena();
 
 protected:
 	Consola();

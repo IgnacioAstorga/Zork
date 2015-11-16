@@ -7,9 +7,9 @@
 class AccionCambiarSituacion : public AccionConMensaje {
 
 public:
-	AccionCambiarSituacion(std::string codigoSituacion);
-	AccionCambiarSituacion(std::string mensaje, std::string codigoSituacion);
-	virtual bool realizarAccion(std::string objetivo);
+	AccionCambiarSituacion(const std::string codigoSituacion);
+	AccionCambiarSituacion(const std::string mensaje, const std::string codigoSituacion);
+	virtual bool realizarAccion(const std::string objetivo);
 
 private:
 	std::string codigoSituacion;

@@ -7,10 +7,10 @@
 class PredicadoFlag : public Predicado {
 
 public:
-	PredicadoFlag(std::string flag, int valor);
-	PredicadoFlag(std::string flag, int valor, bool cierto);
-	PredicadoFlag(std::string codigoSituacion, std::string flag, int valor);
-	PredicadoFlag(std::string codigoSituacion, std::string flag, int valor, bool cierto);
+	PredicadoFlag(const std::string flag, int valor);
+	PredicadoFlag(const std::string flag, int valor, bool cierto);
+	PredicadoFlag(const std::string codigoSituacion, const std::string flag, int valor);
+	PredicadoFlag(const std::string codigoSituacion, const std::string flag, int valor, bool cierto);
 	virtual bool esCierto();
 
 private:

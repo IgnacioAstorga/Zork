@@ -50,7 +50,7 @@ void Mundo::setSituacionActual(Situacion& situacion)
 	situacionActual = &situacion;
 }
 
-std::string Mundo::getObjetivoActual()
+const std::string Mundo::getObjetivoActual()
 {
 	return objetivoActual;
 }

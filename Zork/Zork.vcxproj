@@ -147,11 +147,13 @@
   <ItemGroup>
     <ClInclude Include="Accion.h" />
     <ClInclude Include="AccionAlternativa.h" />
+    <ClInclude Include="AccionCogerObjeto.h" />
     <ClInclude Include="AccionCondicional.h" />
     <ClInclude Include="AccionConMensaje.h" />
     <ClInclude Include="AccionConseguirObjeto.h" />
     <ClInclude Include="AccionFlag.h" />
     <ClInclude Include="AccionPerder.h" />
+    <ClInclude Include="AccionSoltarObjeto.h" />
     <ClInclude Include="Consola.h" />
     <ClInclude Include="Juego.h" />
     <ClInclude Include="AccionCambiarSituacion.h" />
@@ -177,11 +179,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AccionAlternativa.cpp" />
+    <ClCompile Include="AccionCogerObjeto.cpp" />
     <ClCompile Include="AccionCondicional.cpp" />
     <ClCompile Include="AccionConMensaje.cpp" />
     <ClCompile Include="AccionConseguirObjeto.cpp" />
     <ClCompile Include="AccionFlag.cpp" />
     <ClCompile Include="AccionPerder.cpp" />
+    <ClCompile Include="AccionSoltarObjeto.cpp" />
     <ClCompile Include="Consola.cpp" />
     <ClCompile Include="Juego.cpp" />
     <ClCompile Include="Mundo.cpp" />
